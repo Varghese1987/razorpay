@@ -1,0 +1,21 @@
+<div class="container" *ngIf = "isDataAvailable">
+    <div class="card">
+        <div class="card-header">Order Details</div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-lg-3">
+                    <img src="http://placehold.it/350x350" class="card-img-top" alt="...">
+                </div>
+                <div class="col-lg-9">
+                    <h4 class="card-title">Product Name: {{productDetail.product_name}}</h4>
+                    <h4 class="card-title">Price: {{productDetail.product_price}}</h4>
+                    <h6 class="card-title">Other Details</h6>
+                    <p class="card-text">color: {{productDetail.product_color}}</p>
+                    <p class="card-text">Material: {{productDetail.product_material}}</p>
+                    <p class="card-text">Department: {{productDetail.department}}</p>
+                    <button class="btn btn-primary" (click)="razorPayment()">Razorpay Payment</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

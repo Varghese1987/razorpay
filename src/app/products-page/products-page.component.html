@@ -1,0 +1,19 @@
+<div class="container ">
+    <div class="" *ngIf ="isDataAvailable">
+    <div class="row row-cols-1 row-cols-md-4">
+            <div class="" *ngFor = "let item of productsData">
+                <div class="col mb-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="http://placehold.it/350x150" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">{{item.department}}</h5>
+                          <p class="card-text">{{item.product_name}}</p>
+                          <p class="card-text">{{item.product_price}}</p>
+                          <a [routerLink] = "['/payment',item.id]" class="btn btn-primary">Place Order</a>
+                        </div>
+                      </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+</div>
